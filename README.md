@@ -7,4 +7,4 @@ Things that this project will try to focus on will be:
 
 -mobile compatibility implemented by using @media
 
--modern design
+-brutalist design

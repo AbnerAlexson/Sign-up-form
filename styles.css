@@ -161,7 +161,19 @@
 
 /* Styling for if width is below 650px */
 
+@media screen and (max-width: 650px) {
+    .container {
+        display: flex;
+        flex-flow: column wrap;
+    }
 
+    .left {
+        width: 100vw;
+        height: 30%;
+    }
+
+    
+}
 
 
 

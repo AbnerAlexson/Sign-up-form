@@ -149,6 +149,17 @@
     font-family: 'Poppins', sans-serif; 
 }
 
+.login > a{
+    color: #30302A;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.login > a:hover {
+    color: aliceblue;
+}
+
+/* Styling for if width is below 650px */
 
 
 

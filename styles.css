@@ -35,12 +35,11 @@
     height: 15%;
     justify-content: center;
     align-items: center;
-    font-family: 'Myfont', sans-serif;
 }
 
 .logo > h1{
     color: #E0E0E0;
-
+    font-family: 'Myfont', sans-serif;
 }
 
 .png{
@@ -54,39 +53,41 @@
     height: 100%;
     background: #8E9691;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-}
-
-.text-content, .form-container{
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: scroll;
 }
 
 .text-content{
+    width: 100%;
     height: 40%;
-    padding: 120px 30px 90px 30px;
+    padding: 120px 0px 90px 30px;
+    padding-right: 10vw;
 }
 
-.text-content > p {
+.text-content  p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.4;
 }
 
 .loneText {
     margin-top: 40px;
 }
 
+/* right middle styling */
+
 .form-container{
+    border: 1px solid black;
+    width: 100%;
     background: #7C8A8D;
     display: flex;
     flex-flow: row wrap;
-    padding-right: 3vw; 
     padding-bottom: 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    box-shadow: 0px 20px 20px -7px rgba(58, 59, 59, 0.44)
+    box-shadow: 0px 20px 20px -7px rgba(58, 59, 59, 0.44);
 }
 
 .form-container > p{
@@ -96,34 +97,33 @@
 }
 
 .input {
-   /* border: 1px solid black; */
     width: 40%;
     display: flex;
     flex-flow: column wrap;
     margin: 15px 15px 15px 30px;
 }
 
-.input > label{
+.input  label{
     text-transform: uppercase;
     font-family: monospace;
     color: #181818;
 }
 
-.input > input{
+.input  input{
     width: 100%;
     border-radius: 3px;
-    outline: none;
 }
 
-.input > input:focus{
-    border: #C0AC97;
+.input  input:focus{
+    outline: none;
+    border: 2px solid #C0AC97;
 }
 
 /* bottom right styling */
 
 .bottom-side {
     /*border: 1px solid black;*/
-    height: 40%;
+    /*height: 40%;*/
     margin-top: 20px;
     padding: 20px 30px 20px 30px;
 }
@@ -145,6 +145,7 @@
 }
 
 .login {
+    align-self: flex-start;
     margin: 15px 0px 0px 30px;
     font-family: 'Poppins', sans-serif; 
 }
@@ -161,18 +162,71 @@
 
 /* Styling for if width is below 650px */
 
-@media screen and (max-width: 650px) {
+ @media screen and (max-width: 600px) {
+
     .container {
-        display: flex;
-        flex-flow: column wrap;
+        flex-flow: column;
+        height: auto;
     }
 
     .left {
-        width: 100vw;
-        height: 30%;
+        width: 100%;
+        height: 20vh;
     }
 
-    
+    .rightside {
+        width: 100%;
+    }
+
+    .rightside p {
+        width: 100%;
+        height: auto;
+    }
+
+    .text-content{
+        width: 100%;
+        margin: 0;
+        padding: 20px 0px 30px 0px;
+        text-align: center;
+    }
+
+    .loneText {
+        margin: 20px;
+    }
+
+    .form-container {
+        width: 100vw;
+        margin: 0;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    .form-container > p {
+        margin: 10px 0 0 0;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    .input {
+        width: 70%;
+        text-align: center;
+        padding: 0;
+        margin: 20px 0 0 0;
+    }
+
+    .input label{
+        font-size: 1.1rem;
+    }
+
+    .bottom-side {
+        display: flex;
+        justify-content: center;
+    }
+
+    .login {
+        align-self: center;
+    }
+
 }
 
 
